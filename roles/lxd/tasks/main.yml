@@ -1,0 +1,34 @@
+- name: Create LXD Container
+  connection: local
+  become: false
+  lxd_container:
+    name: "{{item}}"
+    state: started
+    source:
+      type: image
+      mode: pull
+      server: https://cloud-images.ubuntu.com/releases
+      #server: https://images.linuxcontainers.org
+      protocol: simplestreams
+      alias: 18.04/amd64
+    profiles: ['default']
+    wait_for_ipv4_addresses: true
+    timeout: 600
+  with_items:
+    - "{{groups['containers']}}"
+- name: Install Python in container
+  delegate_to: "{{item}}"
+  raw: apt update && apt install -y python  aptitude python-minimal unzip openssh-server openssh-server bash-completion vim  
+  with_inventory_hostnames:
+    - all
+  with_inventory_hostnames:
+  - all
+- name: Set authorized key for user ubuntu copying it from current user
+  delegate_to: "{{ item }}"
+  authorized_key:
+    user: ubuntu
+    state: present
+    key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
+  with_inventory_hostnames:
+  - all
+
