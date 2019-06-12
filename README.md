@@ -13,22 +13,22 @@
 
 git clone https://github.com/micrometreuk/haproxy.git
 
-**change to the directory
+**change to the directory**
 
 cd haproxy
 
-**create the containers
+**create the containers**
 
 make containers
 
-**start provisioning the containers
+**start provisioning the containers**
 
 make deploy
 
 
 tests
 
-**List the containers
+**List the containers**
 
 lxc list
 
@@ -39,11 +39,19 @@ lxc list
 
 
 
-**replace ip with the haproxy (lb) container's ip
-
-for i in `seq 1 2000`; do curl 10.246.154.247; done
 
 
 
+**replace ip with the haproxy (lb) container's ip this**
 
+for i in `seq 1 2000`; do curl http://10.246.154.247/; done
+
+**apache benchmark **
+
+##### First install apache utils
+sudo apt-get install apache2-utils
+
+**Run a test with ApacheBench with 1000 requests with a concurrency of 100 **
+
+ab -n 1000 -c 100 http://10.246.154.247/
 
