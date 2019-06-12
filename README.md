@@ -1,9 +1,11 @@
-##Load balancing with lxc containers
+# Load balancing with lxc containers 1
 
-##with  nginx web servers and a Haproxy load balancer
+##with  nginx web servers and a Haproxy load balancer 2
 
-#Dependencies
+#Dependencies 1
+
 1.lxd
+
 2.ansible
 
 #start
