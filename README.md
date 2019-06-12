@@ -1,6 +1,6 @@
 # Load balancing with lxc containers 1
 
-##with  nginx web servers and a Haproxy load balancer 2
+## with  nginx web servers and a Haproxy load balancer 2
 
 #Dependencies 1
 
