@@ -9,7 +9,7 @@
 
 #### 2.ansible
 
-**first clone the repo
+**first clone the repo**
 
 git clone https://github.com/micrometreuk/haproxy.git
 
@@ -46,12 +46,12 @@ lxc list
 
 for i in `seq 1 2000`; do curl http://10.246.154.247/; done
 
-**apache benchmark **
+**apache benchmark**
 
 ##### First install apache utils
 sudo apt-get install apache2-utils
 
-**Run a test with ApacheBench with 1000 requests with a concurrency of 100 **
+**Run a test with ApacheBench with 1000 requests with a concurrency of 100**
 
 ab -n 1000 -c 100 http://10.246.154.247/
 
