@@ -1,16 +1,27 @@
 # Load balancing with lxc containers 
 
-## with  and a Haproxy 
+### Nginx and  Haproxy 
 
-## Dependencies 2
+### Dependencies 
 
-1.lxd
 
-2.ansible
+#### 1.lxd
 
-start
+#### 2.ansible
+
+**first clone the repo**
+
+git clone https://github.com/micrometreuk/haproxy.git
+
+**change to the directory**
+
+cd haproxy
+
+**create the containers**
 
 make containers
+
+**start provisioning the containers**
 
 make deploy
 
