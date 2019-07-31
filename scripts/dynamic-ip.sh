@@ -1,10 +1,10 @@
 #!/bin/bash
-lb_ip=$(lxc list | awk '{ print $2, $6}' | xargs | awk '{print $3, "ansible_host=" $4}')
-web1_ip=$(lxc list | awk '{ print $2, $6}' | xargs | awk '{print $5, "ansible_host=" $6}')
-web2_ip=$(lxc list | awk '{ print $2, $6}' | xargs | awk '{print $7, "ansible_host=" $8}')
+lb1_ip=$(lxc list | grep lb | awk '{print $2, "ansible_host=" $6}')
+web1_ip=$(lxc list | grep web1 | awk '{print $2, "ansible_host=" $6}')
+web2_ip=$(lxc list | grep web2 | awk '{print $2, "ansible_host=" $6}')
 cat  > inventory/site-hosts <<EOL
 [lb]
-${lb_ip}
+${lb1_ip}
 [web]
 ${web1_ip}
 ${web2_ip}

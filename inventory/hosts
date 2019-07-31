@@ -1,4 +1,4 @@
 [containers]
-lb ansible_connection=lxd
+lb1 ansible_connection=lxd
 web1 ansible_connection=lxd
 web2 ansible_connection=lxd
