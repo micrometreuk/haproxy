@@ -1,8 +1,8 @@
 [lb]
-gocms ansible_host=|
+lb ansible_host=10.246.154.17
 [web]
-gogs ansible_host=10.195.134.59
-jenkins ansible_host=10.195.134.237
+web1 ansible_host=10.246.154.79
+web2 ansible_host=10.246.154.194
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_user=ubuntu
