@@ -1,6 +1,8 @@
 # Load balancing with lxc containers 
 
-### Nginx and  Haproxy 
+### Ansible, Nginx and  Haproxy.  
+  
+### 
 
 ### Dependencies 
 
@@ -9,7 +11,7 @@
 
 #### 2.ansible
 
-**first clone the repo**
+**First clone the repo**
 
 git clone https://github.com/micrometreuk/haproxy.git
 
@@ -17,11 +19,12 @@ git clone https://github.com/micrometreuk/haproxy.git
 
 cd haproxy
 
-**create the containers and start provisioning the containers**
+**Create the containers and start provisioning the containers**
 
 make 
 
-### tests
+### Installation validation test.
+
 
 **List the containers**
 
@@ -37,13 +40,13 @@ lxc list
 
 
 
-**replace ip with the haproxy (lb) container's ip this**
+**Replace ip with the haproxy (lb) container's ip this**
 
 for i in `seq 1 2000`; do curl http://10.246.154.247/; done
 
 **apache benchmark**
 
-##### First install apache utils
+##### Install apache utils
 sudo apt-get install apache2-utils
 
 **Run a test with ApacheBench with 1000 requests with a concurrency of 100**
