@@ -44,7 +44,7 @@ lxc list
 
 for i in `seq 1 2000`; do curl http://10.246.154.247/; done
 
-**apache benchmark**
+**Apache benchmark**
 
 ##### Install apache utils
 sudo apt-get install apache2-utils
