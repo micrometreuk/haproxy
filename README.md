@@ -19,7 +19,7 @@ git clone https://github.com/micrometreuk/haproxy.git
 
 cd haproxy
 
-**Create the containers and start provisioning the containers**
+**Start provisioning the containers**
 
 make 
 
