@@ -9,7 +9,7 @@
 
 #### 1.lxd
 
-#### 2.ansible
+#### 2.Ansible
 
 **First clone the repo**
 
