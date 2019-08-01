@@ -15,7 +15,7 @@
 
 git clone https://github.com/micrometreuk/haproxy.git
 
-**change to the directory**
+**Change to the directory**
 
 cd haproxy
 
