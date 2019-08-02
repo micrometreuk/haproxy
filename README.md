@@ -31,9 +31,9 @@ You should see somthing displayed similar to the below:
 
 
 
-**4. Copy the displayed IP address of YOUR lb (Load Balancer) into a Browser of your choice.  
+**4. Copy the displayed IP address of YOUR lb (Load Balancer) into a Browser of your choice.**  
 
-**5. Click the refresh button in your browser to see the 2 web servers alternating the output.
+**5. Click the refresh button in your browser to see the 2 web servers alternating the output.**  
 
 ### Other types of tests  
 
