@@ -1,17 +1,9 @@
-# this script was created to document and address dicovered issues.
-# 1. ansible complains about LXD containers it did not make.
-# 2. changing IP's is not good, simpler method required.
-# 3. created servers are not accesable
-#
+# this script will setup this Load Balancer example.
 
+# Create desired containers and install desired software in each
+make 
 
-# Create desired containers
-make containers
-
-
-make deploy
-
-# Display existing containers and validate creation
+# Display and validate containers creation
 lxc list
 
 # replace ip with the haproxy (lb) container's ip this
