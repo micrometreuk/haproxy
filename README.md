@@ -1,29 +1,26 @@
 # Load balancing with lxc containers 
 
-### Ansible, Nginx and  Haproxy.  
-  
-### 
+Using Ansible, we will demonstrate the Round Robin principle with 2 webservers provided by Nginx and Haproxy as the Load Balancer.  
+
 
 ### Dependencies 
 
-
 #### 1.lxd
-
 #### 2.Ansible
 
-**First clone the repo**
-
+**1. Clone the repo**
+Open a terminal and type:
 git clone https://github.com/micrometreuk/haproxy.git
 
-**Change to the directory**
+**2. Change to the directory**
 
 cd haproxy
 
-**Start provisioning the containers**
+**3. Creating the containers and provisioning required software within them.**
 
 make 
 
-### Installation validation test.
+### Installation Validation Test
 
 
 **List the containers**
