@@ -30,11 +30,11 @@ You should see somthing displayed similar to the below:
 **5. Click the refresh button in your browser to see the 2 web servers alternating the output via the Load Balancer.**  
 
 ### Other interesting tests  
-**Terminal Output**
+**Terminal Output**  
 **To run this test 10 times and display the alternating server results within the terminal, type the following and replace the below IP with the IP address of YOUR Load Balancer.**  
 for run in {1..10}; do curl -i http://10.195.134.118/; done
 
-**Apache benchmark**
+**Apache benchmark**  
 **For more information on average response times, failed requests, tyransfer rate, and more, install Apache utils with:**
 sudo apt-get install apache2-utils
 
