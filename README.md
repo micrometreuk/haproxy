@@ -37,15 +37,14 @@ You should see somthing displayed similar to the below:
 
 ### Other types of tests  
 
-**Type the following and replace the below IP with the IP address of YOUR lb.**  
-for i in `seq 1 2000`; do curl http://10.246.154.247/; done
+**To run the test 10 times and display the results in the terminal, type the following and replace the below IP with the IP address of YOUR Load Balancer.**  
+for run in {1..10}; do curl -i http://10.195.134.118/; done
 
 **Apache benchmark**
 
 ##### Install Apache utils
 sudo apt-get install apache2-utils
 
-**Run a test with ApacheBench with 1000 requests with a concurrency of 100**
-
+**Run a test with ApacheBench with 1000 requests with a concurrency of 100 to see average response times, failed requests and more.**  
 ab -n 1000 -c 100 http://10.246.154.247/
 
