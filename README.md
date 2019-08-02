@@ -17,16 +17,13 @@ cd haproxy
 **3. Creating the containers and provisioning required software within them.**  
 make 
 
-### Installation Validation Test
+### Installation Validation Test  
 
+**List the containers**  
+lxc list  
 
-**List the containers**
-
-lxc list
-
-![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/lxc.png)
-
-
+You should see somthing displayed similar to the below:  
+![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/lxc.png)  
 
 
 
@@ -34,8 +31,13 @@ lxc list
 
 
 
-**Replace ip with the haproxy (lb) container's ip this**
+**4. Copy the displayed IP address of YOUR lb (Load Balancer) into a Browser of your choice.  
 
+**5. Click the refresh button in your browser to see the 2 web servers alternating the output.
+
+### Other types of tests  
+
+**Type the following and replace the below IP with the IP address of YOUR lb.**  
 for i in `seq 1 2000`; do curl http://10.246.154.247/; done
 
 **Apache benchmark**
