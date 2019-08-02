@@ -4,20 +4,17 @@ Using Ansible, we will demonstrate the Round Robin principle with 2 webservers p
 
 
 ### Dependencies 
+#### lXD & Ansible
 
-#### 1.lxd
-#### 2.Ansible
+A terminal is required to perform the following steps:
 
 **1. Clone the repo**
-Open a terminal and type:
 git clone https://github.com/micrometreuk/haproxy.git
 
 **2. Change to the directory**
-
 cd haproxy
 
 **3. Creating the containers and provisioning required software within them.**
-
 make 
 
 ### Installation Validation Test
