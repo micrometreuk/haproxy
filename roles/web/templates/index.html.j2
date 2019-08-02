@@ -7,10 +7,13 @@
 <body>
 <div class="block" style="height: 99%;">
     <div class="centered">
-        <h1>HAproxy Demo by micrometre.co.uk</h1>
+        <h1>HAproxy Round-Robin</h1>
         <P> Hit the refresh button to see the web servers alternate. </p>
-        <p>Served by {{ ansible_hostname }} ({{ ansible_eth0.ipv4.address }}).</p>
+        <p>This page was served by: <b>{{ ansible_hostname }}</b></p> 
+        <p>With the IP address: <b>{{ ansible_eth0.ipv4.address }}.</b></p>
+        <p>Demostration created by <a href="https://micrometre.co.uk/" target="_blank">micrometre</a></p>
     </div>
+    
 </div>
 </body>
 </html>
