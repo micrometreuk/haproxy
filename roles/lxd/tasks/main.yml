@@ -16,11 +16,9 @@
     timeout: 600
   with_items:
     - "{{groups['containers']}}"
-- name: Install Python in container
+- name: Install Python 
   delegate_to: "{{item}}"
   raw: apt update && apt install -y python  aptitude python-minimal unzip openssh-server openssh-server bash-completion vim  
-  with_inventory_hostnames:
-    - all
   with_inventory_hostnames:
   - all
 - name: Set authorized key for user ubuntu copying it from current user
