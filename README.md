@@ -18,8 +18,6 @@ make
 
 ### Installation Validation Test  
 
-**List the containers**  
-lxc list  
 
 You should see somthing displayed similar to the below:  
 ![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/demo.gif)  
