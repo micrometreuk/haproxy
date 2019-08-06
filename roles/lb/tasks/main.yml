@@ -1,9 +1,10 @@
 ---
 - name: install haproxy and socat
-  apt: pkg={{ item }} state=latest
-  with_items:
-  - haproxy
-  - socat
+  apt: 
+    name:
+      - haproxy
+      - socat
+    state: present
 
 - name: enable haproxy
   lineinfile: dest=/etc/default/haproxy regexp="^ENABLED" line="ENABLED=1"
