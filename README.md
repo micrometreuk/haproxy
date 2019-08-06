@@ -23,6 +23,7 @@ lxc list
 
 You should see somthing displayed similar to the below:  
 ![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/lxc.png)  
+![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/demo.gif)  
 
 
 **4. Copy the displayed IP address of YOUR lb (Load Balancer) into a Browser of your choice.**  
