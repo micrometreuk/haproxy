@@ -18,10 +18,9 @@ make
 
 ### Installation Validation Test  
 
-![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/demo-0.gif)  
 
 You should see somthing displayed similar to the below:  
-![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/demo.gif)  
+![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/demo-0.gif)  
 
 
 
