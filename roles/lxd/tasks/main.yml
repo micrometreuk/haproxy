@@ -16,7 +16,7 @@
     timeout: 600
   with_items:
     - "{{groups['containers']}}"
-- name: Install Python 
+- name: Install ansible dependencies 
   delegate_to: "{{item}}"
   raw: apt update && apt install -y python  aptitude python-minimal unzip openssh-server openssh-server bash-completion vim  
   with_inventory_hostnames:
