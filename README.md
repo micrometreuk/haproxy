@@ -14,7 +14,7 @@ git clone https://github.com/micrometreuk/haproxy.git
 cd haproxy
 
 **3. Creating the containers and provisioning required software within them.**  
-make 
+make containers 
 
 ### Installation Validation Test  
 
@@ -36,3 +36,5 @@ sudo apt-get install apache2-utils
 **To run a test with ApacheBenchmark with 1000 requests with a concurrency of 100. This allows one to see .**  
 ab -n 1000 -c 100 http://10.246.154.247/
 
+### Destroy the demo enviroment
+make unmake
