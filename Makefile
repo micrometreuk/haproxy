@@ -5,5 +5,8 @@ containers:
 	bash  scripts/dynamic-ip.sh
 	ansible-playbook -i inventory/site-hosts site.yml
 	bash  scripts/open-browser.sh
+unmake:
+	bash  scripts/unmake.sh
+
 
 
