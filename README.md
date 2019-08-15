@@ -23,6 +23,10 @@ You should see somthing displayed similar to the below:
 ![alt text](https://github.com/micrometreuk/haproxy/blob/master/media/demo-0.gif)  
 
 
+1. Ansible creates the required LXC containers and installs desired software.
+2. Your default browser opens the HAProxy server and refreshes every 5 seconds to display the alternating output of the 2 web servers.
+3. HAProxy also has a 
+
 
 ### Other interesting tests  
 **Terminal Output**  
