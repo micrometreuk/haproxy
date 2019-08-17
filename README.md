@@ -28,17 +28,18 @@ You should see somthing displayed similar to the below:
 3. HAProxy can also provides a statistics report. This is opened and displayed in another browser window.   
 
 
-### Other interesting tests  
+### Other Performance Tests  
 **Terminal Output**  
 **To run this test 10 times and display the alternating server results within the terminal, type the following and replace the below IP with the IP address of YOUR Load Balancer.**  
-for run in {1..10}; do curl -i http://10.195.134.118/; done
-
+for run in {1..10}; do curl -I http://(LoadBalancersIP)/; done  
+Client fot URL's (cURL) will display the header info only per request within the terminal window.  
+  
 **Apache benchmark**  
-**For more information on average response times, failed requests, tyransfer rate, and more, install Apache utils with:**
+**For more information on average response times, failed requests, transfer rate, and more, install Apache utils with:**
 sudo apt-get install apache2-utils
 
-**To run a test with ApacheBenchmark with 1000 requests with a concurrency of 100. This allows one to see .**  
-ab -n 1000 -c 100 http://10.246.154.247/
+**To run a test with ApacheBenchmark with 10000 requests with a concurrency of 1000.**  
+ab -n 10000 -c 1000 http://(LoadBalancersIP)/
 
 ### Destroy the demo enviroment
 Once you are finished with this demonstration, run the below command to remove the created containers.  
