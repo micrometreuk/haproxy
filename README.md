@@ -24,8 +24,8 @@ You should see somthing displayed similar to the below:
 
 
 1. Ansible creates the required LXC containers and installs desired software.
-2. Your default browser opens the HAProxy server and refreshes every 5 seconds to display the alternating output of the 2 web servers.
-3. HAProxy also has a 
+2. Your default browser opens the HAProxy server and refreshes every 3 seconds to display the alternating output of the 2 web servers.
+3. HAProxy can also provides a statistics report. This is opened and displayed in another browser window.   
 
 
 ### Other interesting tests  
@@ -41,4 +41,5 @@ sudo apt-get install apache2-utils
 ab -n 1000 -c 100 http://10.246.154.247/
 
 ### Destroy the demo enviroment
+Once you are finished with this demonstration, run the below command to remove the created containers.  
 make unmake
