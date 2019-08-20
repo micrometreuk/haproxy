@@ -1,8 +1,8 @@
 [lb]
-lb1 ansible_host=10.91.196.201
+lb1 ansible_host=10.91.196.205
 [web]
-web1 ansible_host=10.91.196.44
-web2 ansible_host=10.91.196.85
+web1 ansible_host=10.91.196.148
+web2 ansible_host=10.91.196.154
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
 ansible_user=ubuntu
