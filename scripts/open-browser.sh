@@ -1,8 +1,5 @@
 #!/bin/bash
-# extract ip from the load balancer and open with default brwoser
-#lxc list | grep lb1 | awk '{print "http://"$6}' | xargs xdg-open
-# if the above fails try  with firefox
-#haproxy stats url
 #lxc list | grep lb1 | awk '{print "http://"$6":32700"}' | xargs xdg-open
-lxc list | grep lb1 | awk '{print "http://"$6":32700"   }' | xargs firefox --new-window & 
-lxc list | grep lb1 | awk '{print "http://"$6}' | xargs firefox  --new-window & 
+echo  "pres CTRL + C to continue with  the terminal the firefox will remain open"
+lxc list | grep lb1 | awk '{print "http://"$6":32700"   }' | xargs nohup firefox --new-window & 
+lxc list | grep lb1 | awk '{print "http://"$6}' | xargs nohup firefox  & 
