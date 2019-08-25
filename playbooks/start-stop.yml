@@ -1,0 +1,18 @@
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: start the app with pm2 
+      become: false
+      delegate_to: "{{ item }}"
+      command: chdir=/usr/src/app pm2 start app.js
+      with_inventory_hostnames:
+      - all 
+      tags: pm2_start
+
+    - name: stop the app with pm2 
+      become: false
+      delegate_to: "{{ item }}"
+      command: chdir=/usr/src/app pm2 stop app.js
+      with_inventory_hostnames:
+      - all 
+      tags: pm2_stop

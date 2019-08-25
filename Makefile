@@ -4,9 +4,9 @@ containers:
 	ansible-playbook -i inventory/hosts provision.yml
 	bash  scripts/dynamic-ip.sh
 	ansible-playbook -i inventory/site-hosts site.yml
-	bash  scripts/open-browser.sh
+	ansible-playbook playbooks/web-ui.yml
 unmake:
-	bash  scripts/unmake.sh
+	ansible-playbook playbooks/unmake.yml
 
 
 

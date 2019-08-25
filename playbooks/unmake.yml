@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Stop all demo conatainers
+      become: false
+      shell: lxc list | grep 'lb1\|web1\|web2' | awk '{print $2}'| xargs lxc stop
+      tags: stop_mng1
+
+    - name: Delete all demo conatainers
+      become: false
+      shell: lxc list | grep 'lb1\|web1\|web2' | awk '{print $2}'| xargs lxc delete
+      tags: delete_mng1
