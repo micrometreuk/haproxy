@@ -6,7 +6,7 @@
       shell: lxc list | grep lb1 | awk '{print "http://"$6}' | xargs  firefox  & 
       tags: open_webpage
 
-    - name: Open the web page with firefox
+    - name: Open the haproxy stats page with firefox
       become: false
       shell: lxc list | grep lb1 | awk '{print "http://"$6":32700"   }' | xargs  firefox   
       tags: open_stats
