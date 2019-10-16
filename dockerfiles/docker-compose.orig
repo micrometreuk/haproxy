@@ -9,16 +9,22 @@ services:
         networks:
             public_net:
                 ipv4_address: ${NGINX_1_IP}
-
-    nginx_img_2:
-        container_name: ${COMPOSE_PROJECT_NAME}_nginx_con_2
-        build: ./nginx/2
+    apache_img_1:
+        container_name: ${COMPOSE_PROJECT_NAME}_apache_con_1
+        build: ./apache/1
         expose:
-            - ${NGINX_EXPOSED_PORT}
+            - ${APACHE_EXPOSED_PORT}
         networks:
             public_net:
-                ipv4_address: ${NGINX_2_IP}
-
+                ipv4_address: ${APACHE_1_IP}
+    apache_img_2:
+        container_name: ${COMPOSE_PROJECT_NAME}_apache_con_2
+        build: ./apache/2
+        expose:
+            - ${APACHE_EXPOSED_PORT}
+        networks:
+            public_net:
+                ipv4_address: ${APACHE_2_IP}
     haproxy_img:
         build: ./haproxy
         ports:
@@ -30,7 +36,10 @@ services:
                 ipv4_address: ${HA_PROXY_IP}
         environment:
             - NGINX_1_IP=${NGINX_1_IP}
+            - APACHE_1_IP=${APACHE_1_IP}
+            - APACHE_2_IP=${APACHE_2_IP}
             - NGINX_EXPOSED_PORT=${NGINX_EXPOSED_PORT}
+            - APACHE_EXPOSED_PORT=${APACHE_EXPOSED_PORT}
 networks:
     public_net:
         driver: bridge
