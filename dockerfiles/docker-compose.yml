@@ -18,19 +18,6 @@ services:
         networks:
             public_net:
                 ipv4_address: ${NGINX_2_IP}
-
-    haproxy_img:
-        build: ./haproxy
-        ports:
-            - 80:80
-        expose:
-            - 80
-        networks:
-            public_net:
-                ipv4_address: ${HA_PROXY_IP}
-        environment:
-            - NGINX_1_IP=${NGINX_1_IP}
-            - NGINX_EXPOSED_PORT=${NGINX_EXPOSED_PORT}
 networks:
     public_net:
         driver: bridge
