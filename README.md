@@ -3,7 +3,7 @@
 This configuration of software demonstrates the Round Robin principle of a load balancer, with 2 webservers provided by Nginx and Haproxy as the Load Balancer using Ansible for simplicity of setup (as the alternatives are quite involved).  
 
 **Dependencies**
-lXD & Ansible
+LXD & Ansible
 
 A terminal is required to perform the following steps:
 
